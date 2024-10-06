@@ -1,0 +1,66 @@
+fragment CurrentOrder on Order {
+  id
+  createdOn
+  expectedTimestamp
+  startTimestamp
+  finishTimestamp
+  distanceBest
+  durationBest
+  status
+  destinationArrivedTo
+  etaPickup
+  paidAmount
+  costAfterCoupon
+  providerShare
+  costBest
+  currency
+  addresses
+  waitMinutes
+  waitCost
+  rideOptionsCost
+  serviceCost
+  taxCost
+  paymentMode
+  durationBest
+  driverLastSeenMessagesAt
+  rider {
+    firstName
+    lastName
+    mobileNumber
+    presetAvatarNumber
+    media {
+      address
+    }
+  }
+  paymentGateway {
+    ...PaymentGatewayFragment
+  }
+  savedPaymentMethod {
+    ...SavedPaymentMethodFragment
+  }
+  points {
+    ...Point
+  }
+  directions {
+    ...Point
+  }
+  driverDirections {
+    ...Point
+  }
+  service {
+    name
+    paymentMethod
+  }
+  options {
+    ...RideOption
+  }
+  directions {
+    ...Point
+    lat
+    lng
+  }
+
+  conversations {
+    ...ChatMessage
+  }
+}

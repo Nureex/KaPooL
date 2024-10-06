@@ -1,0 +1,59 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": [
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ridy/admin-panel/*": [
+        "apps/admin-panel/*"
+      ],
+      "@ridy/coupon": [
+        "libs/database/src/lib/coupon/index.ts"
+      ],
+      "@ridy/database": [
+        "libs/database/src/index.ts"
+      ],
+      "@ridy/database/*": [
+        "libs/database/src/lib/entities/*"
+      ],
+      "@ridy/geo/*": [
+        "libs/database/src/lib/geo/*"
+      ],
+      "@ridy/order/*": [
+        "libs/database/src/lib/order/*",
+        "libs/database/src/lib/order/region/*",
+        "libs/database/src/lib/order/google-services/*"
+      ],
+      "@ridy/payment": [
+        "libs/database/src/lib/payment/index.ts"
+      ],
+      "@ridy/redis/*": [
+        "libs/database/src/lib/redis/*"
+      ],
+      "@ridy/sms/*": [
+        "libs/database/src/lib/sms/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

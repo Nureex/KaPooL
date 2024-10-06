@@ -1,0 +1,98 @@
+mutation VerifyNumber($countryIso: String!, $number: String!) {
+  verifyNumber(countryIso: $countryIso, mobileNumber: $number) {
+    ...VerifyNumberFragment
+  }
+}
+
+mutation VerifyOtp($hash: String!, $code: String!) {
+  verifyOtp(hash: $hash, code: $code) {
+    ...VerifyOtpOrPasswordFragment
+  }
+}
+
+mutation VerifyPassword($mobileNumber: String!, $password: String!) {
+  verifyPassword(mobileNumber: $mobileNumber, password: $password) {
+    ...VerifyOtpOrPasswordFragment
+  }
+}
+
+query RegistrationData {
+  driver(id: "1") {
+    ...ProfileFullFragment
+  }
+  carModels {
+    ...VehicleModel
+  }
+  carColors {
+    ...VehicleColor
+  }
+}
+
+mutation SetName($firstName: String!, $lastName: String!) {
+  updateOneDriver(
+    input: { id: "1", update: { firstName: $firstName, lastName: $lastName } }
+  ) {
+    ...ProfileFragment
+  }
+}
+
+mutation SetPassword($password: String!) {
+  updateOneDriver(input: { id: "1", update: { password: $password } }) {
+    ...ProfileFragment
+  }
+}
+
+mutation ResendOtp($mobileNumber: String!) {
+  verifyNumber(mobileNumber: $mobileNumber, forceSendOtp: true) {
+    ...VerifyNumberFragment
+  }
+}
+
+mutation Register(
+  $id: ID!
+  $firstName: String!
+  $lastName: String!
+  $address: String
+  $email: String
+  $gender: Gender
+  $vehiclePlateNumber: String
+  $vehicleModelId: ID
+  $vehicleColorId: ID
+  $vehicleProductionYear: Int
+  $bankName: String
+  $bankRoutingNumber: String
+  $bankAccountNumber: String
+  $bankSwiftCode: String
+  $profilePictureId: ID!
+  $documentIds: [ID!]!
+) {
+  updateOneDriver(
+    input: {
+      id: $id
+      update: {
+        status: PendingApproval
+        firstName: $firstName
+        lastName: $lastName
+        address: $address
+        email: $email
+        gender: $gender
+        carPlate: $vehiclePlateNumber
+        carId: $vehicleModelId
+        carModelId: $vehicleModelId
+        carColorId: $vehicleColorId
+        carProductionYear: $vehicleProductionYear
+        bankName: $bankName
+        bankRoutingNumber: $bankRoutingNumber
+        accountNumber: $bankAccountNumber
+        bankSwift: $bankSwiftCode
+        mediaId: $profilePictureId
+      }
+    }
+  ) {
+    ...ProfileFragment
+  }
+
+  setDocumentsOnDriver(input: { id: $id, relationIds: $documentIds }) {
+    ...ProfileFragment
+  }
+}

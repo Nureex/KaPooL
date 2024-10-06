@@ -1,0 +1,27 @@
+name: generic_map
+description: A generic maps api supporting Google Maps, Mapbox, and OpenStreetMaps
+version: 0.1.5
+# publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  google_maps_flutter: ^2.5.3
+  flutter_map: ^6.1.0
+  flutter_map_animations: ^0.6.0
+  flutter_map_location_marker: ^8.0.4
+  latlong2: ^0.9.0
+  geolocator: ^11.0.0
+
+  flutter:
+    sdk: flutter
+  collection: ^1.17.2
+  flutter_map_cancellable_tile_provider: ^2.0.0
+  widget_to_marker: ^1.0.4
+
+dev_dependencies:
+  flutter_lints: ^3.0.1
+
+flutter:

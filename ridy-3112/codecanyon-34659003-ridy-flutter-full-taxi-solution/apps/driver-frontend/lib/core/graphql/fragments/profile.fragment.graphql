@@ -1,0 +1,50 @@
+fragment ProfileFragment on Driver {
+  id
+  firstName
+  lastName
+  status
+  mobileNumber
+  searchDistance
+  countryIso
+  gender
+  email
+  isWalletHidden
+  softRejectionNote
+  media {
+    ...MediaFragment
+  }
+  wallets {
+    ...WalletFragment
+  }
+  currentOrders {
+    ...CurrentOrder
+  }
+}
+
+fragment ProfileFullFragment on Driver {
+  id
+  firstName
+  lastName
+  email
+  address
+  status
+  gender
+  mobileNumber
+  searchDistance
+  certificateNumber
+  countryIso
+  carPlate
+  carProductionYear
+  carId
+  carColorId
+  bankName
+  bankRoutingNumber
+  accountNumber
+  bankSwift
+  media {
+    ...MediaFragment
+  }
+  documents {
+    ...MediaFragment
+  }
+}

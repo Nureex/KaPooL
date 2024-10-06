@@ -1,0 +1,289 @@
+{
+  "ar": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "feedbacksSummaryEmptyStateHeading",
+    "dateOfBith",
+    "driverShouldAriveInNotice",
+    "slideToConfirmArrival",
+    "slideToConfirmPickup",
+    "slideToConfirmDropoff",
+    "noticePickingUpRiderIn",
+    "noticeRiderNotified",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "bn": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "de": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "es": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "et": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "fa": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "fi": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "fr": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "hi": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "hy": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "id": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "it": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "ja": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "ko": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "ms": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "nl": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "no": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "pl": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "pt": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "ro": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "ru": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "sv": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "th": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "tr": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "uk": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "ur": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "vi": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "zh": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "feedbacksSummaryEmptyStateHeading",
+    "noFavoriteDriversDescription",
+    "payInCash",
+    "payInCashDescription",
+    "addToFavoriteDrivers",
+    "slideToConfirmArrival",
+    "slideToConfirmPickup",
+    "slideToConfirmDropoff",
+    "noticePickingUpRiderIn",
+    "noticeRiderNotified",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "zh_CN": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ],
+
+  "zh_TW": [
+    "distanceInFeets",
+    "distanceInMiles",
+    "adminPanelOnboardingOneTitle",
+    "adminPanelOnboardingOneSubtitle",
+    "adminPanelOnboardingTwoTitle",
+    "adminPanelOnboardingTwoSubtitle"
+  ]
+}

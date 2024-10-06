@@ -1,0 +1,30 @@
+fragment OrderRequest on Order {
+  id
+  status
+  currency
+  costBest
+  paymentMode
+  savedPaymentMethod {
+    ...SavedPaymentMethodFragment
+  }
+  paymentGateway {
+    ...PaymentGatewayFragment
+  }
+  addresses
+  providerShare
+  distanceBest
+  durationBest
+  waitMinutes
+  directions {
+    ...Point
+  }
+  options {
+    ...RideOption
+  }
+  service {
+    name
+  }
+  points {
+    ...Point
+  }
+}

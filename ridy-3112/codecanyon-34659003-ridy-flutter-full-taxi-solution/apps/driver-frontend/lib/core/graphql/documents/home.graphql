@@ -1,0 +1,409 @@
+subscription OrderCreated {
+  orderCreated {
+    ...OrderRequest
+  }
+}
+
+subscription OrderRemoved {
+  orderRemoved {
+    ...OrderRequest
+    id
+  }
+}
+
+subscription OrderUpdated {
+  orderUpdated {
+    ...CurrentOrder
+  }
+}
+
+mutation UpdateDriverLocation($point: PointInput!) {
+  updateDriversLocationNew(point: $point) {
+    ...OrderRequest
+  }
+}
+
+mutation UpdateOrderStatus(
+  $orderId: ID!
+  $status: OrderStatus
+  $cashPayment: Float
+  $destinationArrivedTo: Int
+) {
+  updateOneOrder(
+    input: {
+      id: $orderId
+      update: {
+        status: $status
+        paidAmount: $cashPayment
+        destinationArrivedTo: $destinationArrivedTo
+      }
+    }
+  ) {
+    ...CurrentOrder
+    id
+    createdOn
+    expectedTimestamp
+    startTimestamp
+    finishTimestamp
+    distanceBest
+    durationBest
+    status
+    destinationArrivedTo
+    etaPickup
+    paidAmount
+    costAfterCoupon
+    providerShare
+    costBest
+    currency
+    addresses
+    waitMinutes
+    waitCost
+    rideOptionsCost
+    serviceCost
+    taxCost
+    paymentMode
+    durationBest
+    riderLastSeenMessagesAt
+
+    rider {
+      firstName
+      lastName
+      mobileNumber
+      presetAvatarNumber
+      media {
+        address
+      }
+    }
+    paymentGateway {
+      ...PaymentGatewayFragment
+      id
+      title
+      type
+      linkMethod
+      media {
+        ...MediaFragment
+        id
+        address
+      }
+    }
+    savedPaymentMethod {
+      ...SavedPaymentMethodFragment
+      id
+      providerBrand
+      lastFour
+      isEnabled
+      isDefault
+      title
+      expiryDate
+      holderName
+    }
+    points {
+      ...Point
+      lat
+      lng
+    }
+    directions {
+      ...Point
+      lat
+      lng
+    }
+    driverDirections {
+      ...Point
+      lat
+      lng
+    }
+    service {
+      name
+    }
+    options {
+      ...RideOption
+      id
+      name
+      description
+      type
+      additionalFee
+      icon
+    }
+    directions {
+      ...Point
+      lat
+      lng
+    }
+
+    conversations {
+      ...ChatMessage
+      id
+      sentAt
+      requestId
+      content
+      status
+      sentByDriver
+    }
+  }
+}
+
+mutation UpdateDriverStatus($status: DriverStatus!, $fcmId: String) {
+  updateOneDriver(
+    input: {
+      id: "1"
+      update: { status: $status, notificationPlayerId: $fcmId }
+    }
+  ) {
+    ...ProfileFragment
+    id
+    firstName
+    lastName
+    status
+    mobileNumber
+    searchDistance
+    countryIso
+    gender
+    email
+    isWalletHidden
+    softRejectionNote
+    media {
+      ...MediaFragment
+      id
+      address
+    }
+    wallets {
+      ...WalletFragment
+      balance
+      currency
+    }
+    currentOrders {
+      ...CurrentOrder
+      id
+      createdOn
+      expectedTimestamp
+      startTimestamp
+      finishTimestamp
+      distanceBest
+      durationBest
+      status
+      destinationArrivedTo
+      etaPickup
+      paidAmount
+      costAfterCoupon
+      providerShare
+      costBest
+      currency
+      addresses
+      waitMinutes
+      waitCost
+      rideOptionsCost
+      serviceCost
+      taxCost
+      paymentMode
+      durationBest
+      riderLastSeenMessagesAt
+
+      rider {
+        firstName
+        lastName
+        mobileNumber
+        presetAvatarNumber
+        media {
+          address
+        }
+      }
+      paymentGateway {
+        ...PaymentGatewayFragment
+        id
+        title
+        type
+        linkMethod
+        media {
+          ...MediaFragment
+          id
+          address
+        }
+      }
+      savedPaymentMethod {
+        ...SavedPaymentMethodFragment
+        id
+        providerBrand
+        lastFour
+        isEnabled
+        isDefault
+        title
+        expiryDate
+        holderName
+      }
+      points {
+        ...Point
+        lat
+        lng
+      }
+      directions {
+        ...Point
+        lat
+        lng
+      }
+      driverDirections {
+        ...Point
+        lat
+        lng
+      }
+      service {
+        name
+      }
+      options {
+        ...RideOption
+        id
+        name
+        description
+        type
+        additionalFee
+        icon
+      }
+      directions {
+        ...Point
+        lat
+        lng
+      }
+
+      conversations {
+        ...ChatMessage
+        id
+        sentAt
+        requestId
+        content
+        status
+        sentByDriver
+      }
+    }
+  }
+}
+
+mutation UpdateDriverFCMId($fcmId: String) {
+  updateOneDriver(
+    input: { id: "1", update: { notificationPlayerId: $fcmId } }
+  ) {
+    id
+  }
+}
+
+mutation UpdateDriverSearchDistance($distance: Int) {
+  updateOneDriver(input: { id: "1", update: { searchDistance: $distance } }) {
+    ...ProfileFragment
+  }
+}
+
+query CancelReasons {
+  orderCancelReasons {
+    id
+    title
+  }
+}
+
+mutation SubmitReview($input: RiderReviewInput!) {
+  submitReview(input: $input) {
+    ...CurrentOrder
+    id
+    createdOn
+    expectedTimestamp
+    startTimestamp
+    finishTimestamp
+    distanceBest
+    durationBest
+    status
+    destinationArrivedTo
+    etaPickup
+    paidAmount
+    costAfterCoupon
+    providerShare
+    costBest
+    currency
+    addresses
+    waitMinutes
+    waitCost
+    rideOptionsCost
+    serviceCost
+    taxCost
+    paymentMode
+    durationBest
+    riderLastSeenMessagesAt
+
+    rider {
+      firstName
+      lastName
+      mobileNumber
+      presetAvatarNumber
+      media {
+        address
+      }
+    }
+    paymentGateway {
+      ...PaymentGatewayFragment
+      id
+      title
+      type
+      linkMethod
+      media {
+        ...MediaFragment
+        id
+        address
+      }
+    }
+    savedPaymentMethod {
+      ...SavedPaymentMethodFragment
+      id
+      providerBrand
+      lastFour
+      isEnabled
+      isDefault
+      title
+      expiryDate
+      holderName
+    }
+    points {
+      ...Point
+      lat
+      lng
+    }
+    directions {
+      ...Point
+      lat
+      lng
+    }
+    driverDirections {
+      ...Point
+      lat
+      lng
+    }
+    service {
+      name
+    }
+    options {
+      ...RideOption
+      id
+      name
+      description
+      type
+      additionalFee
+      icon
+    }
+    directions {
+      ...Point
+      lat
+      lng
+    }
+
+    conversations {
+      ...ChatMessage
+      id
+      sentAt
+      requestId
+      content
+      status
+      sentByDriver
+    }
+  }
+}
+
+mutation SendSOS($id: ID!) {
+  sosSignal(orderId: $id) {
+    id
+  }
+}

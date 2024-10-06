@@ -1,0 +1,4 @@
+fragment WalletFragment on DriverWallet {
+  balance
+  currency
+}

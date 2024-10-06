@@ -1,0 +1,27 @@
+mutation UpdatePassword($input: UpdatePasswordInput!) {
+  updatePassword(input: $input) {
+    id
+  }
+}
+
+query GetConfiguration {
+  currentConfiguration {
+    backendMapsAPIKey
+    # adminPanelAPIKey
+    twilioAccountSid
+    twilioAuthToken
+    twilioFromNumber
+    twilioVerificationCodeSMSTemplate
+  }
+}
+
+mutation UpdateConfig($input: UpdateConfigInput!) {
+  saveConfiguration(input: $input) {
+    backendMapsAPIKey
+    # adminPanelAPIKey
+    twilioAccountSid
+    twilioAuthToken
+    twilioFromNumber
+    twilioVerificationCodeSMSTemplate
+  }
+}
