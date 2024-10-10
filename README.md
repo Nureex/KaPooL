@@ -1,6 +1,6 @@
+![#KaPool](https://github.com/Nureex/Files/blob/master/Photos/logo.png)
 # KaPool 
-![KaPool Logo](https://github.com/Nureex/Files/blob/master/Photos/logo.png)
-![KaPool Logo](https://raw.githubusercontent.com/Nureex/Files/master/Photos/logo.png)
+
 
 **KaPool** is a local transportation app built using **React Native** and **Expo** for the frontend, with a **Node.js** backend and **MongoDB** as the database. The API is deployed using **Vercel**.
 
