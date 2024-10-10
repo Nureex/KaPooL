@@ -23,6 +23,10 @@ This is the backend of **KaPool**, built using **Node.js** and **Express** for h
 
 1. Clone the backend repository:
    ```bash
-   git clone https://github.com/yourusername/kapool-backend.git
+   git clone https://github.com/nureex/kapool-backend.git
    cd kapool-backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
    ```
