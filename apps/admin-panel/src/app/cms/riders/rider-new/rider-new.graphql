@@ -1,9 +1,0 @@
-mutation CreateRider($input: RiderInput!) {
-  createOneRider(input: { rider: $input }) {
-    id
-    firstName
-    lastName
-    mobileNumber
-    gender
-  }
-}

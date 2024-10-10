@@ -1,4 +1,0 @@
-enum MeasurementSystem {
-  metric,
-  imperial,
-}

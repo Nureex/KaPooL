@@ -1,5 +1,0 @@
-fragment PointFragment on Point {
-  lat
-  lng
-  heading
-}

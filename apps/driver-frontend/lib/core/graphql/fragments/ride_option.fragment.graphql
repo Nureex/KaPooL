@@ -1,8 +1,0 @@
-fragment RideOption on ServiceOption {
-  id
-  name
-  description
-  type
-  additionalFee
-  icon
-}

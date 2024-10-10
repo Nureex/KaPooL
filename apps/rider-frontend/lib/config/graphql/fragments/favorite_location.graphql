@@ -1,9 +1,0 @@
-fragment FavoriteLocationFragment on RiderAddress {
-  id
-  title
-  type
-  details
-  location {
-    ...PointFragment
-  }
-}

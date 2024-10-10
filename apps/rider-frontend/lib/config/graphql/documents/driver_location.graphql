@@ -1,7 +1,0 @@
-query DriverLocation($point: PointInput!) {
-  getDriversLocation(center: $point) {
-    ...PointFragment
-    lat
-    lng
-  }
-}

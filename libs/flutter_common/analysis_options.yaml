@@ -1,6 +1,0 @@
-analyzer:
-  exclude:
-    - "**.gql.dart"
-    - "**.graphql.dart"
-    - "**.g.dart"
-    - "lib/l10n/**"
