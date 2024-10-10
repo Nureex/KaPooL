@@ -27,15 +27,14 @@ Welcome to the **KaPool** frontend repository! This mobile app is built using **
    git clone https://github.com/nureex/kapoolApp.git
    cd kapoolApp
 
-## Get started
 
-1. Install dependencies
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
     npx expo start
