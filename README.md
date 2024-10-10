@@ -1,4 +1,4 @@
-![#KaPool](https://github.com/Nureex/Files/blob/master/Photos/logo.png)
+![](https://github.com/Nureex/Files/blob/master/Photos/logo.png)
 # KaPool 
 
 
