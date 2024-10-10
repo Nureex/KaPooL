@@ -24,7 +24,7 @@ Welcome to the **KaPool** frontend repository! This mobile app is built using **
 
 1. Clone the frontend repository:
    ```bash
-   git clone https://github.com/yourusername/kapoolApp.git
+   git clone https://github.com/nureex/kapoolApp.git
    cd kapoolApp
 
 ## Get started
