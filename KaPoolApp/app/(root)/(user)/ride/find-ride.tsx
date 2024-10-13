@@ -1,13 +1,12 @@
-import { View, Text } from 'react-native';
-import React, { useEffect, useState } from 'react';
-import RideLayout from '@/components/RideLayout';
-import GoogleTextInput from '@/components/GoogleTextInput';
-import CustomButton from '@/components/CustomButton';
-import { Redirect, router } from 'expo-router';
-import * as Location from 'expo-location';
-import { useLocationStore, useRideStore } from '@/store';
-import { icons } from '@/constants';
-import { API_URL } from '@/lib/utils'
+import { View, Text } from "react-native";
+import React, { useEffect, useState } from "react";
+import RideLayout from "@/components/RideLayout";
+import GoogleTextInput from "@/components/GoogleTextInput";
+import CustomButton from "@/components/CustomButton";
+import { Redirect, router } from "expo-router";
+import * as Location from "expo-location";
+import { useLocationStore, useRideStore } from "@/store";
+import { icons } from "@/constants";
 
 const FindRide = () => {
   const {
@@ -21,34 +20,10 @@ const FindRide = () => {
 
   const { setRide, ride } = useRideStore();
   const [hasPermission, setHasPermission] = useState<boolean>(false);
-
-  
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  if(ride) return <Redirect href="/(root)/(user)/ride/track-ride" />
-  
-  useEffect(() => {
-    (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== "granted") {
-        setHasPermission(false);
-        return;
-      }
-
-      let location = await Location.getCurrentPositionAsync({});
-
-      const address = await Location.reverseGeocodeAsync({
-        latitude: location.coords?.latitude!,
-        longitude: location.coords?.longitude!,
-      });
-
-      setUserLocation({
-        latitude: location.coords?.latitude,
-        longitude: location.coords?.longitude,
-        address: `${address[0].name}, ${address[0].region}`,
-      });
-    })();
-  }, []);
+  // Redirect if a ride is already in progress
+  if (ride) return <Redirect href="/(root)/(user)/ride/track-ride" />;
 
   return (
     <RideLayout title="Ride" showSidebar showBackArrow={false}>
@@ -59,7 +34,7 @@ const FindRide = () => {
 
         <GoogleTextInput
           icon={icons.target}
-          initialLocation={userAddress || 'Enter your current location'}
+          initialLocation={userAddress || "Enter your current location"}
           containerStyle="bg-neutral-100"
           textInputBackgroundColor="#f5f5f5"
           handlePress={(location) => setUserLocation(location)}
@@ -71,16 +46,16 @@ const FindRide = () => {
 
         <GoogleTextInput
           icon={icons.map}
-          initialLocation={destinationAddress ||'Enter your destination'}
+          initialLocation={destinationAddress || "Enter your destination"}
           containerStyle="bg-neutral-100"
           textInputBackgroundColor="transparent"
           handlePress={(location) => setDestinationLocation(location)}
         />
       </View>
-      
-      <CustomButton 
+
+      <CustomButton
         title="Find Now"
-        handlePress={() => router.push('/(root)/(user)/ride/confirm-ride')}
+        handlePress={() => router.push("/(root)/(user)/ride/confirm-ride")}
         containerStyles="w-full mt-7"
       />
     </RideLayout>

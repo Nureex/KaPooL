@@ -2,9 +2,9 @@ import { View, Image } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 import { icons } from "@/constants";
-// import { GoogleInputProps } from "@/types/type";
+import Constants from "expo-constants"; // Import Expo constants
 
-const googlePlacesApiKey = process.env.EXPO_PUBLIC_GOOGLE_API_KEY;
+const googleApiKey = Constants.expoConfig?.extra?.googleApiKey; // Access API key
 
 const GoogleTextInput = ({
   icon,
@@ -60,7 +60,7 @@ const GoogleTextInput = ({
           });
         }}
         query={{
-          key: googlePlacesApiKey,
+          key: { googleApiKey },
           language: "en",
         }}
         renderLeftButton={() => (

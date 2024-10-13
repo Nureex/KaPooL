@@ -19,6 +19,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.nureex.KaPool",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDS2XvjyUiTG9OJO2a6EKy5y79j6WpNBvk"
+        }
       }
     },
     "web": {
@@ -37,6 +47,18 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "2725a718-096f-4f74-bfd2-9cc0443588a0"
+      },
+      "googleApiKey": "AIzaSyDS2XvjyUiTG9OJO2a6EKy5y79j6WpNBvk",
+      "paystackPublicKey": "pk_test_d80111a59896debf8bdd261e8d7a3f35a04984a5",
+      "paystackSecretKey": "sk_test_5e60c09e2f76e12ff810bcae66bff147369b4077"
+    },
+    "owner": "nureex"
   }
 }

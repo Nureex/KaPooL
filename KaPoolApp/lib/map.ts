@@ -85,18 +85,24 @@ export const calculateDriverTimes = async ({
   destinationLatitude: number;
   destinationLongitude: number;
 }) => {
-  if (!userLatitude || !userLongitude || !destinationLatitude || !destinationLongitude) return [];
+  if (
+    !userLatitude ||
+    !userLongitude ||
+    !destinationLatitude ||
+    !destinationLongitude
+  )
+    return [];
 
   try {
     const timesPromises = markers.map(async (marker) => {
       // console.log(`Calculating route from driver at (${marker.latitude}, ${marker.longitude}) to user at (${userLatitude}, ${userLongitude})`);
-      
+
       const responseToUser = await fetch(
         `https://maps.googleapis.com/maps/api/directions/json?origin=${marker.latitude},${marker.longitude}&destination=${userLatitude},${userLongitude}&key=${directionsAPI}`
       );
-      
+
       const dataToUser = await responseToUser.json();
-      
+
       // Check for no routes and log details
       if (!dataToUser.routes || dataToUser.routes.length === 0) {
         console.error("No routes found from driver to user", {
@@ -110,30 +116,33 @@ export const calculateDriverTimes = async ({
       const timeToUser = dataToUser.routes[0].legs[0].duration.value; // Time in seconds
       const distanceToUser = dataToUser.routes[0].legs[0].distance.value / 1000; // Distance in kilometers
 
-
       // console.log(`Calculating route from user at (${userLatitude}, ${userLongitude}) to destination at (${destinationLatitude}, ${destinationLongitude})`);
-      
+
       const responseToDestination = await fetch(
         `https://maps.googleapis.com/maps/api/directions/json?origin=${userLatitude},${userLongitude}&destination=${destinationLatitude},${destinationLongitude}&key=${directionsAPI}`
       );
-      
+
       const dataToDestination = await responseToDestination.json();
 
       // Check for no routes to the destination
       if (!dataToDestination.routes || dataToDestination.routes.length === 0) {
         console.error("No routes found from user to destination", {
           user: { latitude: userLatitude, longitude: userLongitude },
-          destination: { latitude: destinationLatitude, longitude: destinationLongitude },
+          destination: {
+            latitude: destinationLatitude,
+            longitude: destinationLongitude,
+          },
           error: dataToDestination,
         });
         return null; // Skip this marker if no route is found
       }
 
-      const timeToDestination = dataToDestination.routes[0].legs[0].duration.value; // Time in seconds
+      const timeToDestination =
+        dataToDestination.routes[0].legs[0].duration.value; // Time in seconds
       const totalTime = (timeToUser + timeToDestination) / 60; // Total time in minutes
 
-      const distanceToDestination = dataToDestination.routes[0].legs[0].distance.value / 1000; // Distance in kilometers
-
+      const distanceToDestination =
+        dataToDestination.routes[0].legs[0].distance.value / 1000; // Distance in kilometers
 
       const totalDistance = distanceToUser + distanceToDestination; // Total distance in kilometers
 
@@ -141,10 +150,14 @@ export const calculateDriverTimes = async ({
 
       const time = timeToDestination / 60;
 
-      const priceFromDriver = (Number(marker.cost_per_kilometer) * totalDistance);
+      const priceFromDriver = Number(marker.cost_per_kilometer) * totalDistance;
 
-
-      return { ...marker, time: timeToUser / 60, ride_time: timeToDestination / 60, price: priceFromDriver }; // Attach total time to marker data
+      return {
+        ...marker,
+        time: timeToUser / 60,
+        ride_time: timeToDestination / 60,
+        price: priceFromDriver,
+      }; // Attach total time to marker data
     });
 
     const results = await Promise.all(timesPromises);

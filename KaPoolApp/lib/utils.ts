@@ -1,10 +1,9 @@
 import { Ride } from "@/types/type";
 
 // export const API_URL = 'http://192.168.59.186:5000/api';
-export const API_URL = 'https://ka-pool-backend.vercel.app/api';
-export const PAYSTACK_PUBLIC_KEY = 'pk_test_d80111a59896debf8bdd261e8d7a3f35a04984a5'
+export const API_URL = "https://ka-pool-backend.vercel.app/api";
 
-export const sortRides = (rides:any): any => {
+export const sortRides = (rides: any): any => {
   const result = rides.sort((a, b) => {
     const dateA = new Date(`${a.created_at}T${a.ride_time}`);
     const dateB = new Date(`${b.created_at}T${b.ride_time}`);
